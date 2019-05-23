@@ -1,4 +1,4 @@
-package com.example.pbutylinski.sequentialartapp
+package com.example.pbutylinski.sequentialartapp.Helpers
 
 import android.app.Activity
 import android.content.Context

@@ -1,5 +1,6 @@
 package com.example.pbutylinski.sequentialartapp
 
+import com.example.pbutylinski.sequentialartapp.Helpers.*
 import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
@@ -104,16 +105,14 @@ class MainActivity : AppCompatActivity() {
     private fun setButtons() {
         currentStripTextView.text = "$currentStripNumber"
 
-        if (currentStripNumber == 1) {
-            previousStripButton.visibility = View.INVISIBLE
-        } else {
-            previousStripButton.visibility = View.VISIBLE
+        when (currentStripNumber) {
+            1 -> previousStripButton.visibility = View.INVISIBLE
+            else -> previousStripButton.visibility = View.VISIBLE
         }
 
-        if (currentStripNumber == maxStripNumber) {
-            nextStripButton.visibility = View.INVISIBLE
-        } else {
-            nextStripButton.visibility = View.VISIBLE
+        when (currentStripNumber) {
+            maxStripNumber -> nextStripButton.visibility = View.INVISIBLE
+            else -> nextStripButton.visibility = View.VISIBLE
         }
     }
 
